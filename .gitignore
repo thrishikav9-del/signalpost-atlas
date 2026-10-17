@@ -1,0 +1,38 @@
+# Python environments
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables & secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+token*.json
+
+# Results and temporary runs (keep submission and reports structure)
+results/runs/
+logs/
+artifacts/
+scratch/
+*.log
+.cache/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

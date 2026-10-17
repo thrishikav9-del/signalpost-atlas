@@ -1,0 +1,131 @@
+{
+  "run_id": "smoke_100_final",
+  "started_at": "2026-10-17T16:21:17.107124Z",
+  "completed_at": "2026-10-17T16:23:52.560390Z",
+  "expected_count": 100,
+  "emitted_envelopes": 100,
+  "resumed_profiles": 100,
+  "profiles_fetched_this_run": 0,
+  "modules": [
+    "registry",
+    "accounting_obligation",
+    "registry_live",
+    "financials",
+    "roles",
+    "group",
+    "locations",
+    "website"
+  ],
+  "operational_config": {
+    "workers": {
+      "requested": 6,
+      "effective": 6,
+      "source": "default",
+      "clamped": false,
+      "ceiling": 64
+    },
+    "max_per_host": {
+      "requested": 2,
+      "effective": 2,
+      "source": "default",
+      "clamped": false,
+      "ceiling": 2
+    },
+    "max_requests": {
+      "requested": 2000,
+      "effective": 2000,
+      "source": "default",
+      "clamped": false,
+      "ceiling": 100000
+    },
+    "timeout_seconds": {
+      "requested": 2700.0,
+      "effective": 2700.0,
+      "source": "default",
+      "clamped": false,
+      "ceiling": 86400.0
+    },
+    "shutdown_margin": {
+      "requested": 30.0,
+      "effective": 30.0,
+      "source": "default",
+      "clamped": false,
+      "ceiling": 3600.0
+    },
+    "per_request_timeout": {
+      "requested": 8.0,
+      "effective": 8.0,
+      "source": "default",
+      "clamped": false,
+      "ceiling": 120.0
+    }
+  },
+  "registry": {
+    "source": "official_registry_live_api",
+    "requested": 100,
+    "selected": 100
+  },
+  "operations": {
+    "requests": 0,
+    "bytes": 0,
+    "latencies_ms": [],
+    "third_party_cost_usd": 0.0,
+    "runtime_ms": 155687,
+    "tracker_summary": {
+      "total_requests": 100,
+      "total_bytes": 232593,
+      "total_retries": 0,
+      "total_redirects": 0,
+      "p50_latency_ms": 1212,
+      "p95_latency_ms": 4365,
+      "unique_hosts": 1,
+      "host_breakdown": {
+        "data.brreg.no": 100
+      }
+    },
+    "total_outbound_requests": 100,
+    "total_retries": 0,
+    "total_redirects": 0,
+    "host_breakdown": {
+      "data.brreg.no": 100
+    },
+    "p50_ms": 1212,
+    "p95_ms": 4365
+  },
+  "validation": {
+    "passed": true,
+    "checks": {
+      "exact_expected_count": true,
+      "unique_organisation_numbers": true,
+      "all_entity_states_terminal": true,
+      "all_module_states_terminal": true,
+      "zero_silent_drops": true
+    },
+    "invalid_states": []
+  },
+  "website_diagnostics": {
+    "policy": "tiered_website_identity_v1",
+    "total_companies": 100,
+    "verified_websites": 24,
+    "verification_rate": 0.24,
+    "tier_breakdown": {
+      "Tier B": 6,
+      "Tier C": 15,
+      "Tier A": 3
+    },
+    "failure_breakdown": {
+      "insufficient_evidence_name_mismatch": 11,
+      "insufficient_evidence": 1,
+      "insufficient_evidence_address_missing": 10,
+      "conflicting_identifier": 2
+    }
+  },
+  "watchdog": {
+    "budget_seconds": 2700.0,
+    "elapsed_seconds": 155.69,
+    "max_requests": 2000,
+    "used_requests": 100,
+    "within_budget": true,
+    "events": []
+  }
+}
